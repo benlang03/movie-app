@@ -7,8 +7,11 @@ function App() {
 
   useEffect(() => {
     // Fetch movies from the backend API
-    fetch(`${BACKEND}/movies`)
-      .then(res => res.json())
+    fetch("https://movie-app-production-0f0c.up.railway.app/movies")
+      .then(res => {
+        if (!res.ok) throw new Error("Status " + res.status);
+        return res.json();
+      })
       .then(data => setMovies(data))
       .catch(err => console.error("Failed to fetch movies:", err));
   }, []);
