@@ -3,10 +3,6 @@ backend/venv/
 backend/__pycache__/
 backend/*.pyc
 
-# If you ever have a requirements.txt/.env file you DON'T want pushed:
-.env
-*.env
-
 # === Node/Tailwind/React frontend ===
 frontend/node_modules/
 frontend/dist/
