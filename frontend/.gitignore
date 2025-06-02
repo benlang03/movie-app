@@ -1,13 +1,62 @@
-# === Python backend ===
+# ------------------------------
+# ROOT-LEVEL .gitignore FOR “movie-app”
+# ------------------------------
+
+# Ignore logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# ------------------------------
+# Backend (Python)
+# ------------------------------
 backend/venv/
 backend/__pycache__/
 backend/*.pyc
 
-# === Node/Tailwind/React frontend ===
+# If you happen to generate any build artifacts, ignore them, e.g.:
+# backend/dist/
+# backend/build/
+
+# ------------------------------
+# Frontend (Vite + React + Tailwind)
+# ------------------------------
+# 1. Don’t commit node_modules or local build folders:
 frontend/node_modules/
 frontend/dist/
 
-# === Editor/OS artifacts ===
+# 2. Don’t commit “override” env files, but DO commit the plain .env
+#    because Vite needs it at build time.
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# (NOTE: We do NOT list `frontend/.env` here, so that file is tracked.)
+
+# 3. Vite cache (optional)
+frontend/.vite/
+
+# 4. Misc. system or editor files
+.electron/
 .DS_Store
 .vscode/
 .idea/
+
+# ------------------------------
+# Misc. OS / Editor / IDE files
+# ------------------------------
+#   macOS
+.DS_Store
+
+#   Windows
+Thumbs.db
+ehthumbs.db
+
+#   IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
