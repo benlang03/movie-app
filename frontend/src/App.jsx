@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     // Fetch movies from the backend API
-    fetch("https://movie-app-production-0f0c.up.railway.app/movies")
+    fetch("http://127.0.0.1:8000/movies")
       .then(res => {
         if (!res.ok) throw new Error("Status " + res.status);
         return res.json();
