@@ -10,7 +10,6 @@ backend/*.pyc
 # === Node/Tailwind/React frontend ===
 frontend/node_modules/
 frontend/dist/
-frontend/.env
 
 # === Editor/OS artifacts ===
 .DS_Store
