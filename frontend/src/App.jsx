@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 function App() {
   const [movies, setMovies] = useState([]);
 
-  const BACKEND_BASE = "movie-app-production-0f0c.up.railway.app"
+  const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     // Fetch movies from the backend API
-    fetch('${BACKEND_BASE}/movies')
+    fetch(`${BACKEND}/movies`)
       .then(res => res.json())
       .then(data => setMovies(data))
       .catch(err => console.error("Failed to fetch movies:", err));
